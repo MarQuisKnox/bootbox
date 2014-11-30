@@ -77,6 +77,8 @@
     animate: true,
     // additional class string applied to the top level dialog
     className: null,
+    // whether or not to enable keyboard binding
+    keyboard: false,
     // whether or not to include a close button
     closeButton: true,
     // show the dialog immediately by default
@@ -727,7 +729,7 @@
 
     dialog.modal({
       backdrop: options.backdrop,
-      keyboard: false,
+      keyboard: options.keyboard || false,
       show: false
     });
 
@@ -785,6 +787,11 @@
    * unlikely to be required. If this gets too large it can be split out into separate JS files.
    */
   var locales = {
+    bg_BG : {
+      OK      : "Ок",
+      CANCEL  : "Отказ",
+      CONFIRM : "Потвърждавам"
+    },
     br : {
       OK      : "OK",
       CANCEL  : "Cancelar",
@@ -825,6 +832,11 @@
       CANCEL  : "Katkesta",
       CONFIRM : "OK"
     },
+    fa : {
+      OK      : "قبول",
+      CANCEL  : "لغو",
+      CONFIRM : "تایید"
+    },
     fi : {
       OK      : "OK",
       CANCEL  : "Peruuta",
@@ -839,6 +851,16 @@
       OK      : "אישור",
       CANCEL  : "ביטול",
       CONFIRM : "אישור"
+    },
+    hu : {
+      OK      : "OK",
+      CANCEL  : "Mégsem",
+      CONFIRM : "Megerősít"
+    },
+    hr : {
+      OK      : "OK",
+      CANCEL  : "Odustani",
+      CONFIRM : "Potvrdi"
     },
     id : {
       OK      : "OK",
@@ -894,6 +916,11 @@
       OK      : "OK",
       CANCEL  : "Avbryt",
       CONFIRM : "OK"
+    },
+    th : {
+      OK      : "ตกลง",
+      CANCEL  : "ยกเลิก",
+      CONFIRM : "ยืนยัน"
     },
     tr : {
       OK      : "Tamam",
